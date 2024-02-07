@@ -24,15 +24,15 @@ const HomeComponent = ({ isMobile }) => {
       <Text color="white" position={[4.2, 2.2, 0]} fontSize={isMobile ? 0.6 : 0.4} anchorX="center" anchorY="middle">
         'This is probably my best website'
       </Text>
-      <Text color="white" position={[4.2, 1.6, 0]} fontSize={isMobile ? 0.6 : 0.3} anchorX="center" anchorY="middle">
+      <Text color="white" position={[4.2, 1.6, 0]} fontSize={.3} anchorX="center" anchorY="middle">
         -William Montgomery
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[-5, 13.5, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-3.5, 14.5, 0]}>
         <div
           style={{
             position: "absolute",
-            width: isMobile ? `${370 * 1.5}px` : `${700 * 1.5}px`, // Adjust the factor as needed
-            height: isMobile ? `${370 * 1.5}px` : `${700 * 1.5}px`, // Adjust the factor as needed
+            width: `${700 * 1.5}px`, // Adjust the factor as needed
+            height: `${700 * 1.5}px`, // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
