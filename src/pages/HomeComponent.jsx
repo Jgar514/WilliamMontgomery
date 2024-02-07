@@ -27,7 +27,7 @@ const HomeComponent = ({ isMobile }) => {
       <Text color="white" position={[4.2, 1.6, 0]} fontSize={.3} anchorX="center" anchorY="middle">
         -William Montgomery
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[-3.5, 14.5, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-3, 13, 0]}>
         <div
           style={{
             position: "absolute",
