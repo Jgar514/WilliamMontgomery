@@ -34,7 +34,7 @@ const PodcastComponent = ({ isMobile }) => {
       <Text font={PoppinsFont} position={[5.8, 2.9, 0]} fontSize={.28} color="yellow">
         @williamfmontgomery
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[.6, 3.6, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[.6, 2.6, 0]}>
         <div
           style={{
             position: "absolute",
