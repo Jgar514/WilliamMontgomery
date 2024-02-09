@@ -41,8 +41,8 @@ const AboutComponent = ({ isMobile }) => {
         <div
           style={{
             position: "absolute",
-            width: isMobile ? `${370 * 1.5}px` : `${700 * 1.5}px`, // Adjust the factor as needed
-            height: isMobile ? `${370 * 1.5}px` : `${700 * 1.5}px`, // Adjust the factor as needed
+            width: `${700 * 1.5}px`, // Adjust the factor as needed
+            height: `${700 * 1.5}px`, // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
