@@ -38,8 +38,8 @@ const PodcastComponent = ({ isMobile }) => {
         <div
           style={{
             position: "absolute",
-            width: `${700 * .15}px`, // Adjust the factor as needed
-            height: `${700 * .15}px`, // Adjust the factor as needed
+            width: "100px", // Adjust the factor as needed
+            height: "100px", // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
@@ -56,31 +56,15 @@ const PodcastComponent = ({ isMobile }) => {
               opacity: 0.8,
             }}
           />
-          <div
-            style={{
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundImage: isMobile
-                ? "linear-gradient(to bottom, rgba(255, 0, 0, 0) 10%, rgba(255, 0, 0, 1) 25%, rgba(255, 0, 0, 0) 80%)"
-                : "linear-gradient(to right, rgba(0, 0, 0, 0.1) 20%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 0) 100%)",
-              // Adjust the color stops accordingly
-              pointerEvents: "none",
-              zIndex: 2,
-              opacity: 0.1,
-            }}
-          />
+
         </div>
       </Html>
       <Html center zIndexRange={[100, 0]} position={[-15.5, 11.2, 0]}>
         <div
           style={{
             position: "absolute",
-            width: `${700 * 1.1}px`, // Adjust the factor as needed
-            height: `${700 * 1.1}px`, // Adjust the factor as needed
+            width: "750px", // Adjust the factor as needed
+            height: "750px", // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
