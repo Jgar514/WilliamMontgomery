@@ -20,13 +20,15 @@ import ShowsComponent from "./pages/ShowsComponent.jsx";
 import PodcastComponent from "./pages/PodcastComponent.jsx";
 import MobileHome from "./pages/MobileHome.jsx";
 import MobileAbout from "./pages/MobileAbout.jsx";
-import MobileShows from "./pages/MobileShows.jsx"
-import MobilePodcast from "./pages/MobilePodcast.jsx"
+import MobileShows from "./pages/MobileShows.jsx";
+import MobilePodcast from "./pages/MobilePodcast.jsx";
+import { FaCode } from "react-icons/fa";
 
 export default function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [showLink, setShowLink] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -234,6 +236,28 @@ export default function App() {
 
   return (
     <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+      <div
+        className="fixed bottom-0 right-0 z-50 w-10 h-10 flex items-end pb-2  justify-center cursor-pointer "
+        onClick={() => {
+          setShowLink(!showLink); // Toggle the visibility of the link div
+        }}
+      >
+        <FaCode
+          className="opacity-50 text-yellow-200 text-xl"
+        />
+      </div>
+
+      {/* Link div */}
+      {showLink && (
+        <div
+          className="fixed bottom-0 opacity-50 pb-2 right-10 p-1 bg-white rounded shadow cursor-pointer text-black underline z-50 text-base"
+          onClick={() => {
+            window.open("https://joshuagarvey.com/", "_blank");
+          }}
+        >
+          JoshuaGarvey.com
+        </div>
+      )}
       {/* <RedOverlay /> */}
       <Canvas gl={{ preserveDrawingBuffer: true }}>
         <PerspectiveCamera makeDefault {...getCameraProperties()} />

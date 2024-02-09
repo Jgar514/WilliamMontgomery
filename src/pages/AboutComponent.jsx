@@ -27,7 +27,7 @@ const AboutComponent = ({ isMobile }) => {
       />
 
 
-    
+
 
       <Text color="red" position={[4.0, 7.8, 0]} fontSize={isMobile ? 0.6 : 0.65} anchorX="center" anchorY="middle">
         “The Big Red Machine”
@@ -42,7 +42,15 @@ const AboutComponent = ({ isMobile }) => {
       <Text color="white" position={[4.2, 4.4, 0]} fontSize={isMobile ? 0.6 : 0.4} anchorX="center" anchorY="middle">
         The Star of His Very Own Podcast
       </Text>
-      <Text font={PoppinsFont} color="yellow" position={[4.2, 3.8, 0]} fontSize={isMobile ? 0.6 : 0.5} anchorX="center" anchorY="middle">
+      <Text
+        font={PoppinsFont}
+        color="yellow"
+        position={[4.2, 3.8, 0]}
+        fontSize={0.5}
+        anchorX="center"
+        anchorY="middle"
+        onClick={() => window.open("https://www.youtube.com/channel/UCQJ2SBnAMI8SSm5qpLXBRiw", "_blank")}
+      >
         The William Montgomery Show!
       </Text>
       <Html center zIndexRange={[100, 0]} position={[-17, 13, -2]}>

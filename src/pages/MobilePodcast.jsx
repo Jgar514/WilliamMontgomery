@@ -30,10 +30,15 @@ const MobilePodcast = ({ isMobile, handleResetToHome }) => {
               width: "100%",
               height: "100%",
               position: "relative",
-              zIndex: 1,
+              zIndex: 3, // Increase the z-index to be above the other elements
               opacity: 0.6,
+              pointerEvents: "auto", // Enable click events on the image
+            }}
+            onClick={() => {
+              window.open("https://www.youtube.com/channel/UCQJ2SBnAMI8SSm5qpLXBRiw", "_blank");
             }}
           />
+
           <div
             style={{
               content: '""',

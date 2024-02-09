@@ -3,6 +3,7 @@ import { Billboard, Text, Html } from "@react-three/drei";
 import Background from "../assets/william.jpg";
 import PoppinsFont from "/fonts/Poppins-Black.ttf";
 
+
 const MobileHome = ({ isMobile }) => {
 
   return (
@@ -58,6 +59,8 @@ const MobileHome = ({ isMobile }) => {
         </div>
 
       </Html>
+
+
     </Billboard >
 
   );

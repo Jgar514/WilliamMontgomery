@@ -4,6 +4,7 @@ import Background from "../assets/williamgold.jpg";
 import PoppinsFont from "/fonts/Poppins-Black.ttf";
 import BioIcons from "../components/BioIcons";
 
+
 const MobileAbout = ({ isMobile, handleResetToHome }) => {
   const textStyle = {
     color: "white",
@@ -45,6 +46,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
       <Text font={PoppinsFont} position={[1.5, 9.4, 0]} fontSize={.35} color="yellow" >
         The William Montgomery Show!
       </Text>
+     
 
       <Text font={PoppinsFont} position={[.1, 5.9, 0]} fontSize={.6} color="red" onClick={handleResetToHome}>
         BACK
