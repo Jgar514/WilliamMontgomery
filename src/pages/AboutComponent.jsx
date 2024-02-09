@@ -8,7 +8,7 @@ const AboutComponent = ({ isMobile }) => {
   const position = [4.2, 5.0, 0];
   const fontSize = isMobile ? 0.8 : 0.8;
 
-  const fixedIconSize = 45;
+  const fixedIconSize = 40;
   return (
     <Billboard>
 

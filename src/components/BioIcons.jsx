@@ -8,7 +8,7 @@ const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap }) => {
 
   const textStyle = {
     color: "white",
-    fontSize: "24px",
+    fontSize: "20px",
     fontFamily: "Poppins", // Set your font-family here
     marginLeft: "5px",
     whiteSpace: "nowrap",
