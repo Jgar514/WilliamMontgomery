@@ -4,11 +4,11 @@ import { FaHome, FaMapMarkerAlt, FaMusic } from "react-icons/fa";
 import PoppinsFont from "/fonts/Poppins-Black.ttf";
 
 const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap }) => {
-  const smallerIconSize = iconSize / 2;
+
 
   const textStyle = {
     color: "white",
-    fontSize: "14px",
+    fontSize: "24px",
     fontFamily: "Poppins", // Set your font-family here
     marginLeft: "5px",
     whiteSpace: "nowrap",
@@ -28,15 +28,15 @@ const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap }) => {
         }}
       >
         <div style={{ display: "flex", alignItems: "center" }}>
-          <FaHome size={smallerIconSize} style={{ color: "#ffd700" }} />
+          <FaHome size={iconSize} style={{ color: "#ffd700" }} />
           <span style={textStyle}>Austin, Texas</span>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <FaMapMarkerAlt size={smallerIconSize} style={{ color: "#ffd700" }} />
+          <FaMapMarkerAlt size={iconSize} style={{ color: "#ffd700" }} />
           <span style={textStyle}>Memphis, Tennessee</span>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <FaMusic size={smallerIconSize} style={{ color: "#ffd700" }} />
+          <FaMusic size={iconSize} style={{ color: "#ffd700" }} />
           <span style={textStyle}>Aphex Twin</span>
         </div>
       </Html>
