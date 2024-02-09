@@ -59,12 +59,12 @@ const PodcastComponent = ({ isMobile }) => {
 
         </div>
       </Html>
-      <Html center zIndexRange={[100, 0]} position={[-15.5, 11.2, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-14.5, 11.2, 0]}>
         <div
           style={{
             position: "absolute",
-            width: "750px", // Adjust the factor as needed
-            height: "750px", // Adjust the factor as needed
+            width: "950px", // Adjust the factor as needed
+            height: "950px", // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
