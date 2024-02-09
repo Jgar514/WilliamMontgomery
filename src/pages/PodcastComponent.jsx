@@ -38,8 +38,8 @@ const PodcastComponent = ({ isMobile }) => {
         <div
           style={{
             position: "absolute",
-            width: "100px", // Adjust the factor as needed
-            height: "100px", // Adjust the factor as needed
+            width: "140px", // Adjust the factor as needed
+            height: "140px", // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
