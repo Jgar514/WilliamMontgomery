@@ -42,7 +42,7 @@ const MobileHome = ({ isMobile }) => {
               left: "0",
               width: "100%",
               height: "100%",
-              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.5) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(0, 0, 0, 1) 40%)",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(0, 0, 0, 1) 40%)",
 
 
               pointerEvents: "none",

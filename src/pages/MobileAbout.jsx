@@ -19,7 +19,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
     <Billboard>
 
       <BioIcons
-        position={[-1.3, 12.7, 0]}
+        position={[-1.3, 12.9, 0]}
         isMobile={isMobile}
         iconSize={fixedIconSize}
         flexDirection={flexDirection}
@@ -53,7 +53,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
       {/* Add more Text elements as needed */}
 
 
-      <Html center zIndexRange={[100, 0]} position={[-7, 16, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-7.8, 15.5, 0]}>
         <div
           style={{
             position: "absolute",
@@ -73,7 +73,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
               height: "100%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.1,
+              opacity: 0.09,
             }}
           />
           <div
@@ -84,7 +84,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(255, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 70%)",
+              backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(255, 0, 0, .7) 30%, rgba(0, 0, 0, 1) 90%)",
               // Adjust the color stops accordingly
               pointerEvents: "none",
               zIndex: 2,
