@@ -172,7 +172,7 @@ export default function App() {
   const getIconSize = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? 25 : 40;
+        return isMobile ? 25 : 55;
       case "ABOUT":
         return isMobile ? 25 : 40;
       case "SHOWS":
