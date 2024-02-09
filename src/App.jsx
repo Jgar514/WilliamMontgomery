@@ -23,12 +23,15 @@ import MobileAbout from "./pages/MobileAbout.jsx";
 import MobileShows from "./pages/MobileShows.jsx";
 import MobilePodcast from "./pages/MobilePodcast.jsx";
 import { FaCode } from "react-icons/fa";
+import { FaCat } from "react-icons/fa";
+import linkText from './linkTextContent.js';
 
 export default function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [showLink, setShowLink] = useState(false);
+  const [showCatLink, setShowCatLink] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -222,7 +225,7 @@ export default function App() {
   const getOrbitControlsProps = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
+        return isMobile ? { autoRotate: true, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
       case "ABOUT":
         return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, .5, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
       case "SHOWS":
@@ -233,6 +236,12 @@ export default function App() {
         return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [0, 0, 0] };
     }
   };
+
+  const getLinkText = () => {
+    const textContent = linkText[selectedMenuItem] || linkText.DEFAULT;
+    return isMobile ? textContent.mobile : textContent.desktop;
+  };
+
 
   return (
     <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
@@ -256,6 +265,19 @@ export default function App() {
           }}
         >
           JoshuaGarvey.com
+        </div>
+      )}
+      <div className="fixed bottom-0 left-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer" onClick={() => { setShowCatLink(!showCatLink); }}>
+        <FaCat className="opacity-50 text-yellow-200 text-xl" />
+      </div>
+
+      {showCatLink && (
+        <div
+          className="fixed bottom-0 left-10 opacity-85 pb-2 p-1 bg-white rounded shadow text-black underline z-50 text-base"
+        >
+          {getLinkText().map((line, index) => (
+            <div key={index}>{line}</div>
+          ))}
         </div>
       )}
       {/* <RedOverlay /> */}
