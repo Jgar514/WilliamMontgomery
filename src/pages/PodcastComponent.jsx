@@ -9,13 +9,13 @@ import PoppinsFont from "/fonts/Poppins-Black.ttf";
 const PodcastComponent = ({ isMobile }) => {
   const position = isMobile ? [0, 0, 0] : [4.2, 5.0, 0];
   const fontSize = isMobile ? 0.8 : 0.8;
-  const fixedIconSize = 35;
+  const iconSize = 40;
 
   const isDesktop = !isMobile; // Determine if it's desktop based on isMobile
 
   return (
     <Billboard>
-      <PodcastIcons position={[5.8, 2.0, 0]} fixedIconSize={fixedIconSize} isDesktop={isDesktop} />
+      <PodcastIcons position={[5.8, 2.0, 0]} fixedIconSize={iconSize} isDesktop={isDesktop} />
       {/* Add podcast description and other details */}
       {/* Add more Text elements as needed */}
 
