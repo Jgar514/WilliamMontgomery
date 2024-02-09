@@ -59,7 +59,7 @@ const PodcastComponent = ({ isMobile }) => {
 
         </div>
       </Html>
-      <Html center zIndexRange={[100, 0]} position={[-14.5, 10.2, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-14.8, 10.2, 0]}>
         <div
           style={{
             position: "absolute",
