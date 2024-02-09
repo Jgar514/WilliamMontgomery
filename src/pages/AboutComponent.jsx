@@ -37,7 +37,7 @@ const AboutComponent = ({ isMobile }) => {
       <Text font={PoppinsFont} color="yellow" position={[4.2, 3.8, 0]} fontSize={isMobile ? 0.6 : 0.5} anchorX="center" anchorY="middle">
         The William Montgomery Show!
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[-17, 13.5, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-17, 13, -2]}>
         <div
           style={{
             position: "absolute",
@@ -56,7 +56,7 @@ const AboutComponent = ({ isMobile }) => {
               width: "100%",
               height: "100%",
               position: "relative",
-              zIndex: 1,
+              zIndex: 2,
               opacity: 0.1,
             }}
           />
