@@ -31,8 +31,8 @@ const HomeComponent = ({ isMobile }) => {
         <div
           style={{
             position: "absolute",
-            width: `${700 * 1.5}px`, // Adjust the factor as needed
-            height: `${700 * 1.5}px`, // Adjust the factor as needed
+            width: `${700 * 1.8}px`, // Adjust the factor as needed
+            height: `${700 * 1.8}px`, // Adjust the factor as needed
             pointerEvents: "none",
             overflow: "hidden",
           }}
@@ -48,7 +48,7 @@ const HomeComponent = ({ isMobile }) => {
               height: "100%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.06,
+              opacity: 0.08,
             }}
           />
           <div
@@ -63,7 +63,7 @@ const HomeComponent = ({ isMobile }) => {
               // Adjust the color stops accordingly
               pointerEvents: "none",
               zIndex: 2,
-              opacity: 0.07,
+              opacity: 0.1,
             }}
           />
 
