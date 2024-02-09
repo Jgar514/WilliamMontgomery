@@ -18,7 +18,7 @@ const SocialIcons = ({ position, isMobile, iconSize, isAboutMobile }) => {
           display: "flex",
           flexDirection: isAboutMobile ? "column" : "row",
           alignItems: isMobile ? "center" : "center",
-          gap: isMobile ? "8px" : "16px",
+          gap: isMobile ? "12px" : "16px",
         }}
       >
         {/* Update the URLs and add onClick event handlers */}

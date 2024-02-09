@@ -1,4 +1,3 @@
-// Import necessary components and libraries
 import React from "react";
 import { Billboard, Html } from "@react-three/drei";
 import {
@@ -9,8 +8,12 @@ import {
   FaReddit,
 } from "react-icons/fa";
 
-// VerticalSocialIcons component
 const VerticalSocialIcons = ({ position, isMobile, iconSize }) => {
+  // Function to handle opening links in a new window
+  const openLinkInNewWindow = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <Billboard position={position}>
       <Html
@@ -25,34 +28,42 @@ const VerticalSocialIcons = ({ position, isMobile, iconSize }) => {
         }}
       >
         {/* Facebook icon */}
-        <a href="link_to_facebook" target="_blank">
-          <FaFacebook size={iconSize} style={{ color: "#3b5998" }} />
-        </a>
+        <FaFacebook
+          size={iconSize}
+          style={{ color: "#3b5998", cursor: "pointer" }}
+          onClick={() => openLinkInNewWindow("https://www.facebook.com/profile.php?id=100009745215532")}
+        />
 
         {/* Twitter icon */}
-        <a href="link_to_twitter" target="_blank">
-          <FaTwitter size={iconSize} style={{ color: "#1da1f2" }} />
-        </a>
+        <FaTwitter
+          size={iconSize}
+          style={{ color: "#1da1f2", cursor: "pointer" }}
+          onClick={() => openLinkInNewWindow("https://twitter.com/WMintgimery")}
+        />
 
         {/* Instagram icon */}
-        <a href="link_to_instagram" target="_blank">
-          <FaInstagram size={iconSize} style={{ color: "#bc2a8d" }} />
-        </a>
+        <FaInstagram
+          size={iconSize}
+          style={{ color: "#bc2a8d", cursor: "pointer" }}
+          onClick={() => openLinkInNewWindow("https://www.instagram.com/william.f.montgomery1/?ref=williamfmontgomery.com")}
+        />
 
         {/* Youtube icon */}
-        <a href="link_to_youtube" target="_blank">
-          <FaYoutube size={iconSize} style={{ color: "#ff0000" }} />
-        </a>
+        <FaYoutube
+          size={iconSize}
+          style={{ color: "#ff0000", cursor: "pointer" }}
+          onClick={() => openLinkInNewWindow("https://www.youtube.com/channel/UCQJ2SBnAMI8SSm5qpLXBRiw")}
+        />
 
         {/* Reddit icon */}
-        <a href="link_to_reddit" target="_blank">
-          <FaReddit size={iconSize} style={{ color: "#ff4500" }} />
-        </a>
+        <FaReddit
+          size={iconSize}
+          style={{ color: "#ff4500", cursor: "pointer" }}
+          onClick={() => openLinkInNewWindow("https://old.reddit.com/r/WilliamsWorld/")}
+        />
       </Html>
     </Billboard>
   );
 };
 
 export default VerticalSocialIcons;
-
-

@@ -5,14 +5,27 @@ import PoppinsFont from "/fonts/Poppins-Black.ttf";
 import BioIcons from "../components/BioIcons";
 
 const MobileAbout = ({ isMobile, handleResetToHome }) => {
-
-  const fixedIconSize = 25;
+  const textStyle = {
+    color: "white",
+    fontSize: "14px",
+    fontFamily: "Poppins", // Set your font-family here
+    marginLeft: "5px",
+    whiteSpace: "nowrap",
+  };
+  const fixedIconSize = 17;
   const flexDirection = "row";
   const iconGap = "5px";
   return (
     <Billboard>
 
-
+      <BioIcons
+        position={[-1.3, 12.7, 0]}
+        isMobile={isMobile}
+        iconSize={fixedIconSize}
+        flexDirection={flexDirection}
+        iconGap={iconGap}
+        textStyle={textStyle} // Pass the iconGap prop
+      />
       <Text font={PoppinsFont} position={[1.5, 13.2, 0]} fontSize={.4} color="red" >
         'The Big Red Machine'
       </Text>
@@ -38,13 +51,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
       </Text>
 
       {/* Add more Text elements as needed */}
-      <BioIcons
-        position={[-1, 12.7, 0]}
-        isMobile={isMobile}
-        iconSize={fixedIconSize}
-        flexDirection={flexDirection}
-        iconGap={iconGap} // Pass the iconGap prop
-      />
+
 
       <Html center zIndexRange={[100, 0]} position={[-7, 16, 0]}>
         <div
@@ -77,7 +84,7 @@ const MobileAbout = ({ isMobile, handleResetToHome }) => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 0) 100%)",
+              backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(255, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 70%)",
               // Adjust the color stops accordingly
               pointerEvents: "none",
               zIndex: 2,

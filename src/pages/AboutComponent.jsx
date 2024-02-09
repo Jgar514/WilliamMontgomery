@@ -7,6 +7,13 @@ import BioIcons from "../components/BioIcons";
 const AboutComponent = ({ isMobile }) => {
   const position = [4.2, 5.0, 0];
   const fontSize = isMobile ? 0.8 : 0.8;
+  const textStyle = {
+    color: "white",
+    fontSize: "20px",
+    fontFamily: "Poppins", // Set your font-family here
+    marginLeft: "5px",
+    whiteSpace: "nowrap",
+  };
 
   const fixedIconSize = 25;
   return (
@@ -15,11 +22,12 @@ const AboutComponent = ({ isMobile }) => {
       <BioIcons
         position={[-.5, 7.4, 0]}  // Adjust the position based on your layout
         isMobile={isMobile}
-        iconSize={fixedIconSize}  // Adjust the size based on your layout
+        iconSize={fixedIconSize}
+        textStyle={textStyle} // Adjust the size based on your layout
       />
 
 
-
+    
 
       <Text color="red" position={[4.0, 7.8, 0]} fontSize={isMobile ? 0.6 : 0.65} anchorX="center" anchorY="middle">
         “The Big Red Machine”

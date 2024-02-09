@@ -3,17 +3,7 @@ import { Billboard, Html } from "@react-three/drei";
 import { FaHome, FaMapMarkerAlt, FaMusic } from "react-icons/fa";
 import PoppinsFont from "/fonts/Poppins-Black.ttf";
 
-const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap }) => {
-
-
-  const textStyle = {
-    color: "white",
-    fontSize: "20px",
-    fontFamily: "Poppins", // Set your font-family here
-    marginLeft: "5px",
-    whiteSpace: "nowrap",
-  };
-
+const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap, textStyle }) => {
   return (
     <Billboard position={position}>
       <Html
@@ -45,5 +35,3 @@ const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap }) => {
 };
 
 export default BioIcons;
-
-
