@@ -1,54 +1,60 @@
+const textColor1 = "#000000";
+const textColor2 = "#ff0000";
+const textColor3 = "#00ff00";
+const textColor4 = "#0000ff";
+
+// Link text object with color variables
 const linkText = {
   HOME: {
     desktop: [
-      "Home Desktop Line 1",
-      "Home Desktop Line 2"
+      { text: "Home Desktop Line 1", color: textColor1 },
+      { text: "Home Desktop Line 2", color: textColor2 }
     ],
     mobile: [
-      "Home Mobile Line 1",
-      "Home Mobile Line 2"
+      { text: "Home Mobile Line 1", color: textColor3 },
+      { text: "Home Mobile Line 2", color: textColor4 }
     ],
   },
   ABOUT: {
     desktop: [
-      "About Desktop Line 1",
-      "About Desktop Line 2",
-      "About Desktop Line 2",
-      "About Desktop Line 2, About Desktop Line 2"
+      { text: "About Desktop Line 1", color: textColor1 },
+      { text: "About Desktop Line 2", color: textColor2 },
+      { text: "About Desktop Line 3", color: textColor3 },
+      { text: "About Desktop Line 4", color: textColor4 }
     ],
     mobile: [
-      "About Mobile Line 1",
-      "About Mobile Line 2"
+      { text: "About Mobile Line 1", color: textColor1 },
+      { text: "About Mobile Line 2", color: textColor2 }
     ],
   },
   SHOWS: {
     desktop: [
-      "Shows Desktop Line 1",
-      "Shows Desktop Line 2"
+      { text: "Shows Desktop Line 1", color: textColor1 },
+      { text: "Shows Desktop Line 2", color: textColor2 }
     ],
     mobile: [
-      "Shows Mobile Line 1",
-      "Shows Mobile Line 2"
+      { text: "Shows Mobile Line 1", color: textColor1 },
+      { text: "Shows Mobile Line 2", color: textColor2 }
     ],
   },
   PODCAST: {
     desktop: [
-      "Podcast Desktop Line 1",
-      "Podcast Desktop Line 2"
+      { text: "Podcast Desktop Line 1", color: textColor1 },
+      { text: "Podcast Desktop Line 2", color: textColor2 }
     ],
     mobile: [
-      "Podcast Mobile Line 1",
-      "Podcast Mobile Line 2"
+      { text: "Podcast Mobile Line 1", color: textColor1 },
+      { text: "Podcast Mobile Line 2", color: textColor2 }
     ],
   },
   DEFAULT: {
     desktop: [
-      "Default Desktop Line 1",
-      "Default Desktop Line 2"
+      { text: "Default Desktop Line 1", color: textColor1 },
+      { text: "Default Desktop Line 2", color: textColor2 }
     ],
     mobile: [
-      "Default Mobile Line 1",
-      "Default Mobile Line 2"
+      { text: "Default Mobile Line 1", color: textColor1 },
+      { text: "Default Mobile Line 2", color: textColor2 }
     ],
   },
 };

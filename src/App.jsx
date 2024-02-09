@@ -225,7 +225,7 @@ export default function App() {
   const getOrbitControlsProps = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { autoRotate: true, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
+        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
       case "ABOUT":
         return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, .5, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
       case "SHOWS":
@@ -273,10 +273,10 @@ export default function App() {
 
       {showCatLink && (
         <div
-          className="fixed bottom-0 left-10 opacity-85 pb-2 p-1 bg-white rounded shadow text-black underline z-50 text-base"
+          className="fixed bottom-0 left-10 opacity-50 pb-2 p-1 bg-white rounded shadow cursor-pointer text-black  z-50 text-base"
         >
           {getLinkText().map((line, index) => (
-            <div key={index}>{line}</div>
+            <div key={index} style={{ color: line.color }}>{line.text}</div>
           ))}
         </div>
       )}
