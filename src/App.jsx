@@ -189,7 +189,7 @@ export default function App() {
       case "HOME":
         return isMobile ? [0, 13.5, 0] : [4, 7, 0];
       case "ABOUT":
-        return isMobile ? [1, 15.5, -6] : [4, .7, 0];
+        return isMobile ? [1, 15.5, -6] : [4, 1.7, 0];
       case "SHOWS":
         return isMobile ? [1, 15.4, -6] : [4, 7, 0];
       case "PODCAST":
