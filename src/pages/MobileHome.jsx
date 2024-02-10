@@ -42,14 +42,14 @@ const MobileHome = ({ isMobile }) => {
               top: "0",
               left: "0",
               width: "100%",
-              height: "100%",
+              height: "122%",
               backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(0, 0, 0, 1) 40%)",
 
 
               pointerEvents: "none",
               zIndex: 2,
               opacity: .2,
-              transform: "translate(20px, -120px)",
+              transform: "translate(20px, -190px)",
             }}
           />
 
