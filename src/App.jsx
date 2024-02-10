@@ -50,7 +50,8 @@ export default function App() {
     console.log("Resetting to HOME");
     setSelectedMenuItem('HOME');
     setIsMenuVisible(false);
-    setShowCatLink(false);
+
+
   };
 
   // My Pages
@@ -88,6 +89,7 @@ export default function App() {
   const handleMenuItemClick = (menuItem) => {
     setSelectedMenuItem(menuItem);
     setIsMenuVisible(true);
+    setShowCatLink(false);
   };
 
   const getMenuTextStyle = (menuItem) => {

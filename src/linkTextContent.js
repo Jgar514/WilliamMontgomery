@@ -7,10 +7,12 @@ const textColor4 = "#0000ff"; //blue
 const linkText = {
   HOME: {
     desktop: [
+      { text: "Home.Desktop", color: textColor4 },
       { text: "The text on this page is just the text from his current website.", color: textColor1 },
       { text: "Make model able to be moved left and right but not up and down.", color: textColor3 }
     ],
     mobile: [
+      { text: "Home.Mobile", color: textColor4 },
       { text: "Was going for the creepy blended background look.", color: textColor1 },
       { text: "Thought the red circle gradient in the middle gives that stage lighting spotlight feel.", color: textColor1 },
       { text: "Is the red circle to ugly?", color: textColor2 },
@@ -19,35 +21,40 @@ const linkText = {
   },
   ABOUT: {
     desktop: [
+      { text: "About.Desktop", color: textColor4 },
       { text: "Underline the name of the show so users know they can click it.", color: textColor3 },
       { text: "Should the icon and font UNDER 'the big red machine' be smaller?", color: textColor2 },
       { text: "Is the layout good?", color: textColor2 },
-      { text: "About Desktop Line 4", color: textColor4 }
+
     ],
     mobile: [
+      { text: "About.Mobile", color: textColor4 },
       { text: "Pretty happy with this but will take any suggestions.", color: textColor1 },
       { text: "Will underline and link the name of the show.", color: textColor3 }
     ],
   },
   SHOWS: {
     desktop: [
+      { text: "Shows.Desktop", color: textColor4 },
       { text: "Need to format text  for the shows better.", color: textColor1 },
       { text: "Should there be a background? Im thinking because its business it should stay pretty plain.", color: textColor2 },
       { text: "Should I add the white background gradient that Shows on mobile has?", color: textColor2 }
     ],
     mobile: [
-      { text: "Need to format this better", color: textColor1 },
+      { text: "Shows.Mobile", color: textColor4 },
       { text: "Similiar to desktop, wondering if I should have a background image or keep it simple and plain since its business.", color: textColor2 },
       { text: "Should back button be red?", color: textColor2 }
     ],
   },
   PODCAST: {
     desktop: [
+      { text: "Podcast.Desktop", color: textColor4 },
       { text: "Need to link to podcast on the title and image.", color: textColor3 },
       { text: "Cool with the background image positioning?", color: textColor2 },
       { text: "Should bg image be more transparent?", color: textColor2 },
     ],
     mobile: [
+      { text: "Podcast.Mobile", color: textColor4 },
       { text: "Should underline and link name of show.", color: textColor3 },
       { text: "None of the elements are overlapping right?", color: textColor2 }
     ],
