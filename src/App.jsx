@@ -321,15 +321,15 @@ export default function App() {
   return (
     <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
       <div
-        className="fixed bottom-0 right-0 z-50 w-10 h-10 flex items-end pb-2  justify-center cursor-pointer "
+        className="fixed bottom-0 right-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer"
         onClick={() => {
           setShowLink(!showLink); // Toggle the visibility of the link div
           // Change the icon color
-          setIconColor(showLink ? 'yellow' : 'red');
+          setIconColor(showLink ? "yellow" : "red");
         }}
       >
         <FaCode
-          className={`opacity-50 text-${iconColor}-200 text-xl`}
+          className={`opacity-80 text-xl ${showLink ? "text-yellow-200" : "text-red-800"}`}
         />
       </div>
 
