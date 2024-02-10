@@ -250,7 +250,7 @@ export default function App() {
           enableZoom: true,
           enablePan: true,
           target: [1, .5, 0],
-          minPolarAngle: Math.PI / 2,
+          minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
         } : {
           autoRotate: false,
@@ -266,7 +266,7 @@ export default function App() {
           enableZoom: true,
           enablePan: true,
           target: [2, 1, 1],
-          minPolarAngle: Math.PI / 2,
+          minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
         } : {
           autoRotate: false,
@@ -282,7 +282,7 @@ export default function App() {
           enableZoom: true,
           enablePan: true,
           target: [1, 0, 0],
-          minPolarAngle: Math.PI / 2,
+          minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
         } : {
           autoRotate: false,
