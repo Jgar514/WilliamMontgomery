@@ -62,12 +62,12 @@ const PodcastComponent = ({ isMobile }) => {
 
         </div>
       </Html>
-      <Html center zIndexRange={[100, 0]} position={[-14.8, 10.2, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-14.8, 10.0, 0]}>
         <div
           style={{
             position: "absolute",
-            width: "950px", // Adjust the factor as needed
-            height: "950px", // Adjust the factor as needed
+            width: "1000px", // Adjust the factor as needed
+            height: "1000px", // Adjust the factor as needed
             pointerEvents: "none", // Cursor won't interact with the image
             userSelect: "none",
             overflow: "hidden",
