@@ -50,6 +50,7 @@ export default function App() {
     console.log("Resetting to HOME");
     setSelectedMenuItem('HOME');
     setIsMenuVisible(false);
+    setShowCatLink(false);
   };
 
   // My Pages
@@ -268,12 +269,12 @@ export default function App() {
         </div>
       )}
       <div className="fixed bottom-0 left-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer" onClick={() => { setShowCatLink(!showCatLink); }}>
-        <FaCat className="opacity-50 text-yellow-200 text-xl" />
+        <FaCat className="opacity-70 text-yellow-200 text-xl" />
       </div>
 
       {showCatLink && (
         <div
-          className="fixed bottom-0 left-10 opacity-50 pb-2 p-1 bg-white rounded shadow cursor-pointer text-black  z-50 text-base"
+          className="fixed bottom-0 left-10 opacity-100 pb-2 p-1 bg-white rounded shadow cursor-pointer   z-50 text-base"
         >
           {getLinkText().map((line, index) => (
             <div key={index} style={{ color: line.color }}>{line.text}</div>
