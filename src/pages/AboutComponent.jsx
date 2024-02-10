@@ -10,7 +10,7 @@ const AboutComponent = ({ isMobile }) => {
   const textStyle = {
     color: "white",
     fontSize: "20px",
-    fontFamily: "Poppins", // Set your font-family here
+    fontFamily: "Poppins",
     marginLeft: "5px",
     whiteSpace: "nowrap",
   };
@@ -18,16 +18,12 @@ const AboutComponent = ({ isMobile }) => {
   const fixedIconSize = 25;
   return (
     <Billboard>
-
       <BioIcons
-        position={[-.5, 7.4, 0]}  // Adjust the position based on your layout
+        position={[-.5, 7.4, 0]}
         isMobile={isMobile}
         iconSize={fixedIconSize}
-        textStyle={textStyle} // Adjust the size based on your layout
+        textStyle={textStyle}
       />
-
-
-
 
       <Text color="red" position={[4.0, 7.8, 0]} fontSize={isMobile ? 0.6 : 0.65} anchorX="center" anchorY="middle">
         “The Big Red Machine”
@@ -57,14 +53,13 @@ const AboutComponent = ({ isMobile }) => {
         <div
           style={{
             position: "absolute",
-            width: `${700 * 1.5}px`, // Adjust the factor as needed
-            height: `${700 * 1.5}px`, // Adjust the factor as needed
-            pointerEvents: "none",
+            width: `${700 * 1.5}px`,
+            height: `${700 * 1.5}px`,
+            pointerEvents: "none", // Cursor won't interact with the image
+            userSelect: "none", // Cursor won't interact with the div
             overflow: "hidden",
           }}
-
         >
-          {/* Apply the gradient overlay using ::before pseudo-element */}
           <img
             src={Background}
             alt="Background"
@@ -74,6 +69,8 @@ const AboutComponent = ({ isMobile }) => {
               position: "relative",
               zIndex: 2,
               opacity: 0.1,
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none", // Prevent the image from being selectable
             }}
           />
           <div
@@ -87,18 +84,18 @@ const AboutComponent = ({ isMobile }) => {
               backgroundImage: isMobile
                 ? "linear-gradient(to bottom, rgba(255, 0, 0, 0) 10%, rgba(255, 0, 0, 1) 25%, rgba(255, 0, 0, 0) 80%)"
                 : "linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 0) 100%)",
-              // Adjust the color stops accordingly
-              pointerEvents: "none",
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none",
               zIndex: 2,
               opacity: 0.1,
             }}
           />
         </div>
-
       </Html>
-    </Billboard >
-
+    </Billboard>
   );
 };
 
 export default AboutComponent;
+;
+

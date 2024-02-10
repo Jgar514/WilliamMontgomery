@@ -14,20 +14,21 @@ const BioIcons = ({ position, flexDirection, iconSize, isMobile, iconGap, textSt
           flexDirection: flexDirection || "row",
           alignItems: "flex-start",
           justifyContent: "flex-start",
-          gap: iconGap || "50px", // Use iconGap prop or default to "50px"
+          gap: iconGap || "50px",
+          pointerEvents: "none", // Cursor won't interact with the BioIcons component
         }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <FaHome size={iconSize} style={{ color: "#ffd700" }} />
-          <span style={textStyle}>Austin, Texas</span>
+        <div style={{ display: "flex", alignItems: "center", pointerEvents: "none" }}>
+          <FaHome size={iconSize} style={{ color: "#ffd700", pointerEvents: "none" }} />
+          <span style={{ ...textStyle, pointerEvents: "none", userSelect: "none" }}>Austin, Texas</span>
         </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <FaMapMarkerAlt size={iconSize} style={{ color: "#ffd700" }} />
-          <span style={textStyle}>Memphis, Tennessee</span>
+        <div style={{ display: "flex", alignItems: "center", pointerEvents: "none" }}>
+          <FaMapMarkerAlt size={iconSize} style={{ color: "#ffd700", pointerEvents: "none" }} />
+          <span style={{ ...textStyle, pointerEvents: "none", userSelect: "none" }}>Memphis, Tennessee</span>
         </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <FaMusic size={iconSize} style={{ color: "#ffd700" }} />
-          <span style={textStyle}>Aphex Twin</span>
+        <div style={{ display: "flex", alignItems: "center", pointerEvents: "none" }}>
+          <FaMusic size={iconSize} style={{ color: "#ffd700", pointerEvents: "none" }} />
+          <span style={{ ...textStyle, pointerEvents: "none", userSelect: "none" }}>Aphex Twin</span>
         </div>
       </Html>
     </Billboard>

@@ -40,7 +40,8 @@ const PodcastComponent = ({ isMobile }) => {
             position: "absolute",
             width: "140px", // Adjust the factor as needed
             height: "140px", // Adjust the factor as needed
-            pointerEvents: "none",
+            pointerEvents: "none", // Cursor won't interact with the image
+            userSelect: "none",
             overflow: "hidden",
           }}
         >
@@ -54,6 +55,8 @@ const PodcastComponent = ({ isMobile }) => {
               position: "relative",
               zIndex: 1,
               opacity: 0.8,
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none",
             }}
           />
 
@@ -65,7 +68,8 @@ const PodcastComponent = ({ isMobile }) => {
             position: "absolute",
             width: "950px", // Adjust the factor as needed
             height: "950px", // Adjust the factor as needed
-            pointerEvents: "none",
+            pointerEvents: "none", // Cursor won't interact with the image
+            userSelect: "none",
             overflow: "hidden",
           }}
 
@@ -80,6 +84,8 @@ const PodcastComponent = ({ isMobile }) => {
               position: "relative",
               zIndex: 1,
               opacity: 0.06,
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none",
             }}
           />
           <div
@@ -95,7 +101,8 @@ const PodcastComponent = ({ isMobile }) => {
                 : "linear-gradient(to right, rgba(0, 0, 0, 0.2) 20%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 0.0) 80%)",
 
               // Adjust the color stops accordingly
-              pointerEvents: "none",
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none",
               zIndex: 2,
               opacity: 0.1,
             }}

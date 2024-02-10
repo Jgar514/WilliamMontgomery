@@ -33,8 +33,10 @@ const HomeComponent = ({ isMobile }) => {
             position: "absolute",
             width: `${700 * 1.8}px`, // Adjust the factor as needed
             height: `${700 * 1.8}px`, // Adjust the factor as needed
-            pointerEvents: "none",
+
             overflow: "hidden",
+            pointerEvents: "none", // Cursor won't interact with the image
+            userSelect: "none",
           }}
 
 
@@ -49,6 +51,8 @@ const HomeComponent = ({ isMobile }) => {
               position: "relative",
               zIndex: 1,
               opacity: 0.08,
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none",
             }}
           />
           <div
@@ -61,7 +65,8 @@ const HomeComponent = ({ isMobile }) => {
               height: "100%",
               backgroundImage: "linear-gradient(to right, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 1) 100%)",
               // Adjust the color stops accordingly
-              pointerEvents: "none",
+              pointerEvents: "none", // Cursor won't interact with the image
+              userSelect: "none",
               zIndex: 2,
               opacity: 0.1,
             }}
