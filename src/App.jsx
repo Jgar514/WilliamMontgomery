@@ -32,6 +32,7 @@ export default function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [showLink, setShowLink] = useState(false);
   const [showCatLink, setShowCatLink] = useState(false);
+  const [iconColor, setIconColor] = useState('yellow');
 
   useEffect(() => {
     const handleResize = () => {
@@ -228,17 +229,88 @@ export default function App() {
   const getOrbitControlsProps = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
+        return isMobile ? {
+          autoRotate: false,
+          enableZoom: true,
+          enablePan: true,
+          target: [1, -2, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        } : {
+          autoRotate: false,
+          enableZoom: false,
+          enablePan: false,
+          target: [1, 0, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        };
       case "ABOUT":
-        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, .5, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
+        return isMobile ? {
+          autoRotate: false,
+          enableZoom: true,
+          enablePan: true,
+          target: [1, .5, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        } : {
+          autoRotate: false,
+          enableZoom: false,
+          enablePan: false,
+          target: [1, 0, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        };
       case "SHOWS":
-        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [2, 1, 1] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
+        return isMobile ? {
+          autoRotate: false,
+          enableZoom: true,
+          enablePan: true,
+          target: [2, 1, 1],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        } : {
+          autoRotate: false,
+          enableZoom: false,
+          enablePan: false,
+          target: [1, 0, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        };
       case "PODCAST":
-        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, 0, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [1, 0, 0] };
+        return isMobile ? {
+          autoRotate: false,
+          enableZoom: true,
+          enablePan: true,
+          target: [1, 0, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        } : {
+          autoRotate: false,
+          enableZoom: false,
+          enablePan: false,
+          target: [1, 0, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        };
       default:
-        return isMobile ? { autoRotate: false, enableZoom: true, enablePan: true, target: [1, -2, 0] } : { autoRotate: false, enableZoom: false, enablePan: false, target: [0, 0, 0] };
+        return isMobile ? {
+          autoRotate: false,
+          enableZoom: true,
+          enablePan: true,
+          target: [1, -2, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        } : {
+          autoRotate: false,
+          enableZoom: false,
+          enablePan: false,
+          target: [0, 0, 0],
+          minPolarAngle: Math.PI / 2,
+          maxPolarAngle: Math.PI / 2
+        };
     }
   };
+
 
   const getLinkText = () => {
     const textContent = linkText[selectedMenuItem] || linkText.DEFAULT;
@@ -252,10 +324,12 @@ export default function App() {
         className="fixed bottom-0 right-0 z-50 w-10 h-10 flex items-end pb-2  justify-center cursor-pointer "
         onClick={() => {
           setShowLink(!showLink); // Toggle the visibility of the link div
+          // Change the icon color
+          setIconColor(showLink ? 'yellow' : 'red');
         }}
       >
         <FaCode
-          className="opacity-50 text-yellow-200 text-xl"
+          className={`opacity-50 text-${iconColor}-200 text-xl`}
         />
       </div>
 
