@@ -98,7 +98,7 @@ const PodcastComponent = ({ isMobile }) => {
               height: "100%",
               backgroundImage: isMobile
                 ? "linear-gradient(to bottom, rgba(255, 0, 0, 0) 10%, rgba(255, 0, 0, 1) 25%, rgba(255, 0, 0, 0) 80%)"
-                : "linear-gradient(to right, rgba(0, 0, 0, 0.2) 20%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 0.0) 80%)",
+                : "linear-gradient(to right, rgba(0, 0, 0, 0.2) 20%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 0.5) 80%)",
 
               // Adjust the color stops accordingly
               pointerEvents: "none", // Cursor won't interact with the image
