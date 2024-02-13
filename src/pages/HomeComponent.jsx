@@ -53,7 +53,7 @@ const HomeComponent = ({ isMobile }) => {
 
               pointerEvents: "none",
               zIndex: 3,
-              opacity: .2,
+              opacity: .18,
 
             }}
           />
@@ -76,17 +76,17 @@ const HomeComponent = ({ isMobile }) => {
             src={Background}
             alt="Background"
             style={{
-              width: "130%",
+              width: "90%",
               height: "130%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.05,
+              opacity: 0.04,
               pointerEvents: "none", // Cursor won't interact with the image
               userSelect: "none",
             }}
           />
 
-          <div
+          {/* <div
             style={{
               content: '""',
               position: "absolute",
@@ -94,17 +94,17 @@ const HomeComponent = ({ isMobile }) => {
               left: "0",
               width: "10%",
               height: "20%",
-              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(23, 23, 32, 1) 40%)",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(0, 0, 0, 1) 40%)",
 
 
 
 
               pointerEvents: "none",
               zIndex: 2,
-              opacity: .2,
+              opacity: .8,
 
             }}
-          />
+          /> */}
 
         </div>
 
