@@ -3,11 +3,14 @@ import { Billboard, Text, Html } from "@react-three/drei";
 import Background from "../assets/william.png";
 import PoppinsFont from "/fonts/Poppins-Black.ttf";
 
-const HomeComponent = ({ isMobile }) => {
+const HomeComponent = ({ isMobile, isTablet }) => {
   if (isMobile) {
     // If it's mobile, don't render the component
     return null;
   }
+
+  const htmlPosition1 = isTablet ? [-9, 17, -3] : [-6.4, 10.3, 2];
+  const htmlPosition2 = isTablet ? [-8, 14.5, -3] : [-6.4, 10.3, 2];
 
 
 
@@ -27,7 +30,7 @@ const HomeComponent = ({ isMobile }) => {
       <Text color="white" position={[4.2, 1.6, 0]} fontSize={.3} anchorX="center" anchorY="middle">
         -William Montgomery
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[-9, 15, -3]}>
+      <Html center zIndexRange={[100, 0]} position={htmlPosition1}>
         <div
           style={{
             position: "absolute",
@@ -60,7 +63,7 @@ const HomeComponent = ({ isMobile }) => {
 
         </div>
       </Html>
-      <Html center zIndexRange={[100, 0]} position={[-6.4, 10.3, 2]}>
+      <Html center zIndexRange={[100, 0]} position={htmlPosition2}>
         <div
           style={{
             position: "absolute",
@@ -80,7 +83,7 @@ const HomeComponent = ({ isMobile }) => {
               height: "130%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.04,
+              opacity: 0.06,
               pointerEvents: "none", // Cursor won't interact with the image
               userSelect: "none",
             }}

@@ -35,6 +35,7 @@ export default function App() {
   const [showCatLink, setShowCatLink] = useState(false);
   const [iconColor, setIconColor] = useState('yellow');
 
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -62,7 +63,7 @@ export default function App() {
   const renderMenuItemComponent = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? <MobileHome /> : <HomeComponent />;
+        return isMobile ? <MobileHome /> : <HomeComponent isTablet={isTablet} />
       case "ABOUT":
         return isMobile ? <MobileAbout handleResetToHome={handleResetToHome} /> : <AboutComponent />;
       case "SHOWS":
@@ -168,13 +169,13 @@ export default function App() {
   const getTitleFontSize = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? 0.8 : 1.0;
+        return isMobile ? 0.8 : .9;
       case "ABOUT":
         return isMobile ? 0.8 : .9;
       case "SHOWS":
-        return isMobile ? 0.8 : 1.0;
+        return isMobile ? 0.8 : .9;
       case "PODCAST":
-        return isMobile ? 0.8 : 1.0;
+        return isMobile ? 0.8 : .9;
       default:
         return isMobile ? 0.8 : 1.0;
     }
@@ -217,13 +218,13 @@ export default function App() {
   const getCameraProperties = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { position: [1, 0, 15], fov: 60 } : (isTablet ? { position: [1, 0, 14], fov: 50 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [1, 0, 15], fov: 60 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
       case "ABOUT":
-        return isMobile ? { position: [-8, -1, -8], fov: 65 } : (isTablet ? { position: [-8, -1, -8], fov: 60 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [-8, -1, -8], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
       case "SHOWS":
-        return isMobile ? { position: [-8, -1, -7], fov: 65 } : (isTablet ? { position: [-8, -1, -7], fov: 60 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [-8, -1, -7], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
       case "PODCAST":
-        return isMobile ? { position: [-8, -1, -8], fov: 67 } : (isTablet ? { position: [-8, -1, -8], fov: 62 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [-8, -1, -8], fov: 67 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
       default:
         return { position: [1, 0, 12], fov: 50 };
     }
@@ -350,7 +351,7 @@ export default function App() {
           JoshuaGarvey.com
         </div>
       )}
-      <div className="fixed bottom-0 left-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer" onClick={() => { setShowCatLink(!showCatLink); }}>
+      {/* <div className="fixed bottom-0 left-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer" onClick={() => { setShowCatLink(!showCatLink); }}>
         <FaCat className="opacity-70 text-yellow-200 text-xl" />
       </div>
 
@@ -362,7 +363,7 @@ export default function App() {
             <div key={index} style={{ color: line.color }}>{line.text}</div>
           ))}
         </div>
-      )}
+      )} */}
       {/* <RedOverlay /> */}
       <Canvas style={{ width: '100%', height: '100%' }} resize={{ debounce: 50 }} gl={{ preserveDrawingBuffer: true }}>
         <PerspectiveCamera makeDefault {...getCameraProperties()} />
