@@ -328,8 +328,10 @@ export default function App() {
           setIconColor(showLink ? 'yellow' : 'red');
         }}
       >
+
         <FaCode
-          className={`opacity-50 text-${iconColor}-200 text-xl`}
+          className={`opacity-80 text-xl ${showLink ? "text-yellow-200" : "text-red-800"}`}
+
         />
       </div>
 
