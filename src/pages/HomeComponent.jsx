@@ -9,7 +9,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
     return null;
   }
 
-  const htmlPosition1 = isTablet ? [-9, 17, -3] : [-8.5, 12, 2];
+  const htmlPosition1 = isTablet ? [-10.2, 18, -3] : [-8.5, 12, 2];
   const htmlPosition2 = isTablet ? [-8, 14.5, -3] : [-6.4, 10.3, 2];
 
 
