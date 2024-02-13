@@ -9,7 +9,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
     return null;
   }
 
-  const htmlPosition1 = isTablet ? [-9, 17, -3] : [-6.4, 10.3, 2];
+  const htmlPosition1 = isTablet ? [-9, 17, -3] : [-6.4, 10.7, 2];
   const htmlPosition2 = isTablet ? [-8, 14.5, -3] : [-6.4, 10.3, 2];
 
 
@@ -56,7 +56,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
 
               pointerEvents: "none",
               zIndex: 3,
-              opacity: .18,
+              opacity: .2,
 
             }}
           />
