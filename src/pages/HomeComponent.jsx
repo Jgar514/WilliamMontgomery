@@ -9,7 +9,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
     return null;
   }
 
-  const htmlPosition1 = isTablet ? [-9, 17, -3] : [-6.4, 10.7, 2];
+  const htmlPosition1 = isTablet ? [-9, 17, -3] : [-8.5, 12, 2];
   const htmlPosition2 = isTablet ? [-8, 14.5, -3] : [-6.4, 10.3, 2];
 
 
@@ -34,8 +34,8 @@ const HomeComponent = ({ isMobile, isTablet }) => {
         <div
           style={{
             position: "absolute",
-            width: `${window.innerWidth * .8}px`, // Multiply by 1.2
-            height: `${window.innerHeight * 1}px`,
+            width: `${window.innerWidth * 1}px`, // Multiply by 1.2
+            height: `${window.innerHeight * 1.2}px`,
             overflow: "hidden",
             pointerEvents: "none", // Cursor won't interact with the image
             userSelect: "none",
@@ -49,13 +49,13 @@ const HomeComponent = ({ isMobile, isTablet }) => {
               left: "0",
               width: "120%",
               height: "120%",
-              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(23, 23, 32, 1) 40%)",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0.6) 10%, rgba(153, 0, 0, 0.7) 20%, rgba(153, 0, 0, 0.3) 30%, rgba(23, 23, 32, 1) 45%)",
 
 
 
 
               pointerEvents: "none",
-              zIndex: 3,
+              zIndex: 1,
               opacity: .2,
 
             }}
