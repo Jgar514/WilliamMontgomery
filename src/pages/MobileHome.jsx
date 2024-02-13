@@ -16,7 +16,7 @@ const MobileHome = ({ isMobile }) => {
         <div
           style={{
             position: "absolute",
-            width: `${window.innerWidth * 1.5}px`, // Multiply by 1.2
+            width: `${window.innerWidth * 1.6}px`, // Multiply by 1.2
             height: `${window.innerHeight * 1.3}px`, // Multiply by 1.2
             pointerEvents: "none",
             overflow: "hidden",
@@ -31,7 +31,7 @@ const MobileHome = ({ isMobile }) => {
               height: "100%", // Increase the height to zoom in
               position: "relative",
               zIndex: 1,
-              opacity: 0.08,
+              opacity: 0.13,
               top: "-10%", // Shift the image up by 10%
             }}
           />
@@ -43,12 +43,13 @@ const MobileHome = ({ isMobile }) => {
               left: "0",
               width: "100%",
               height: "112%",
-              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%,  rgba(23, 23, 32, 1) 40%)",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, .5) 0%, rgba(255, 0, 0, .5) 20%, rgba(153, 0, 0, 0.5) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(0, 0, 0, .5) 40%, rgba(23, 23, 32, .7) 90%)"
+              ,
 
 
               pointerEvents: "none",
-              zIndex: 2,
-              opacity: .2,
+              zIndex: 1,
+              opacity: .37,
               transform: "translate(20px, -210px)",
             }}
           />
