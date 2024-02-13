@@ -27,48 +27,82 @@ const HomeComponent = ({ isMobile }) => {
       <Text color="white" position={[4.2, 1.6, 0]} fontSize={.3} anchorX="center" anchorY="middle">
         -William Montgomery
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[-3.2, 13.3, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-9, 15, -3]}>
         <div
           style={{
             position: "absolute",
-            width: `${700 * 1.8}px`, // Adjust the factor as needed
-            height: `${700 * 1.8}px`, // Adjust the factor as needed
-
+            width: `${window.innerWidth * .8}px`, // Multiply by 1.2
+            height: `${window.innerHeight * 1}px`,
             overflow: "hidden",
             pointerEvents: "none", // Cursor won't interact with the image
             userSelect: "none",
           }}
+        >
+          <div
+            style={{
+              content: '""',
+              position: "absolute",
+              top: "0",
+              left: "0",
+              width: "120%",
+              height: "120%",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(23, 23, 32, 1) 40%)",
 
 
+
+
+              pointerEvents: "none",
+              zIndex: 3,
+              opacity: .2,
+
+            }}
+          />
+
+        </div>
+      </Html>
+      <Html center zIndexRange={[100, 0]} position={[-6.4, 10.3, 2]}>
+        <div
+          style={{
+            position: "absolute",
+            width: `${window.innerWidth * 1}px`, // Multiply by 1.2
+            height: `${window.innerHeight * 1.1}px`,
+            overflow: "hidden",
+            pointerEvents: "none", // Cursor won't interact with the image
+            userSelect: "none",
+          }}
         >
           {/* Apply the gradient overlay using ::before pseudo-element */}
           <img
             src={Background}
             alt="Background"
             style={{
-              width: "100%",
-              height: "100%",
+              width: "130%",
+              height: "130%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.08,
+              opacity: 0.05,
               pointerEvents: "none", // Cursor won't interact with the image
               userSelect: "none",
             }}
           />
+
           <div
             style={{
               content: '""',
               position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundImage: "linear-gradient(to right, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 1) 48%, rgba(0, 0, 0, 1) 100%)",
-              // Adjust the color stops accordingly
-              pointerEvents: "none", // Cursor won't interact with the image
-              userSelect: "none",
+              top: "0",
+              left: "0",
+              width: "10%",
+              height: "20%",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(23, 23, 32, 1) 40%)",
+
+
+
+
+              pointerEvents: "none",
               zIndex: 2,
-              opacity: 0.1,
+              opacity: .2,
+
             }}
           />
 

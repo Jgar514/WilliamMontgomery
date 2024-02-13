@@ -12,16 +12,15 @@ const MobileHome = ({ isMobile }) => {
 
       {/* Add more Text elements as needed */}
 
-      <Html center zIndexRange={[100, 0]} position={[-11, 18, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-6, 18.6, 0]}>
         <div
           style={{
             position: "absolute",
-            width: `${700 * 1.2}px`, // Adjust the factor as needed
-            height: `${700 * 1.2}px`, // Adjust the factor as needed
+            width: `${window.innerWidth * 1.3}px`, // Multiply by 1.2
+            height: `${window.innerHeight * 1.3}px`, // Multiply by 1.2
             pointerEvents: "none",
             overflow: "hidden",
           }}
-
         >
           {/* Apply the gradient overlay using ::before pseudo-element */}
           <img
@@ -41,7 +40,7 @@ const MobileHome = ({ isMobile }) => {
               position: "absolute",
               top: "0",
               left: "0",
-              width: "100%",
+              width: "90%",
               height: "122%",
               backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(153, 0, 0, 0.4) 30%, rgba(153, 0, 0, 0.5) 30%, rgba(0, 0, 0, 1) 40%)",
 
