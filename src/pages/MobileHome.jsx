@@ -49,7 +49,7 @@ const MobileHome = ({ isMobile }) => {
 
               pointerEvents: "none",
               zIndex: 1,
-              opacity: .37,
+              opacity: .3,
               transform: "translate(20px, -210px)",
             }}
           />
