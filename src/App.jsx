@@ -269,7 +269,7 @@ export default function App() {
           autoRotate: false,
           enableZoom: true,
           enablePan: true,
-          target: [2, 1, 1],
+          target: [1, .5, 0],
           minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
         } : {

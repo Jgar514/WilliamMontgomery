@@ -57,12 +57,12 @@ const MobilePodcast = ({ isMobile, handleResetToHome }) => {
           />
         </div>
       </Html>
-      <Html center zIndexRange={[100, 0]} position={[-6, 15, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-6, 16, 0]}>
         <div
           style={{
             position: "absolute",
             width: `${700 * 1.3}px`,
-            height: `${700 * 1.3}px`,
+            height: `${700 * 1.7}px`,
             pointerEvents: "none",
             overflow: "hidden",
           }}
@@ -77,7 +77,7 @@ const MobilePodcast = ({ isMobile, handleResetToHome }) => {
               height: "100%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.05,
+              opacity: 0.06,
             }}
           />
           <div
@@ -88,9 +88,9 @@ const MobilePodcast = ({ isMobile, handleResetToHome }) => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundImage: isMobile
-                ? "linear-gradient(to bottom, rgba(255, 0, 0, 0) 10%, rgba(255, 0, 0, 1) 25%, rgba(255, 0, 0, 0) 80%)"
-                : "linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 100%)",
+              backgroundImage:
+
+                "linear-gradient(to bottom, #171720 0%, rgba(255, 255, 255, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 100%) ",
 
               pointerEvents: "none",
               zIndex: 2,
