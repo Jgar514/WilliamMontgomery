@@ -29,6 +29,7 @@ import linkText from './linkTextContent.js';
 export default function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [showLink, setShowLink] = useState(false);
   const [showCatLink, setShowCatLink] = useState(false);
@@ -36,8 +37,10 @@ export default function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+      const width = window.innerWidth;
+      setIsMobile(width < 901);
+      setIsTablet(width >= 901 && width < 1200); // Check for tablet size
+    }
     handleResize(); // Check on component mount
     setSelectedMenuItem("HOME");
     window.addEventListener("resize", handleResize);
@@ -214,17 +217,18 @@ export default function App() {
   const getCameraProperties = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { position: [1, 0, 15], fov: 60 } : { position: [1, 0, 12], fov: 50 };
+        return isMobile ? { position: [1, 0, 15], fov: 60 } : (isTablet ? { position: [1, 0, 14], fov: 50 } : { position: [1, 0, 12], fov: 50 });
       case "ABOUT":
-        return isMobile ? { position: [-8, -1, -8], fov: 65 } : { position: [1, 0, 12], fov: 50 };
+        return isMobile ? { position: [-8, -1, -8], fov: 65 } : (isTablet ? { position: [-8, -1, -8], fov: 60 } : { position: [1, 0, 12], fov: 50 });
       case "SHOWS":
-        return isMobile ? { position: [-8, -1, -7], fov: 65 } : { position: [1, 0, 12], fov: 50 };
+        return isMobile ? { position: [-8, -1, -7], fov: 65 } : (isTablet ? { position: [-8, -1, -7], fov: 60 } : { position: [1, 0, 12], fov: 50 });
       case "PODCAST":
-        return isMobile ? { position: [-8, -1, -8], fov: 67 } : { position: [1, 0, 12], fov: 50 };
+        return isMobile ? { position: [-8, -1, -8], fov: 67 } : (isTablet ? { position: [-8, -1, -8], fov: 62 } : { position: [1, 0, 12], fov: 50 });
       default:
         return { position: [1, 0, 12], fov: 50 };
     }
   };
+
 
   const getOrbitControlsProps = () => {
     switch (selectedMenuItem) {
@@ -360,7 +364,7 @@ export default function App() {
         </div>
       )}
       {/* <RedOverlay /> */}
-      <Canvas gl={{ preserveDrawingBuffer: true }}>
+      <Canvas style={{ width: '100%', height: '100%' }} resize={{ debounce: 50 }} gl={{ preserveDrawingBuffer: true }}>
         <PerspectiveCamera makeDefault {...getCameraProperties()} />
         <OrbitControls {...getOrbitControlsProps()} />
         <Suspense fallback={null}>

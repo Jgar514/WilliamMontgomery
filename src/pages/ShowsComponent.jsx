@@ -27,19 +27,19 @@ const ShowsComponent = ({ isMobile }) => {
   return (
     <>
       <Billboard>
-        <Text color="white" position={[2.5, 5.0, 0]} fontSize={fontSize}>
+        <Text color="white" position={[3.1, 5.2, 0]} fontSize={fontSize}>
           2/23-24 Detroit House of Comedy
         </Text>
-        <Text color="white" position={[2.5, 3.5, 0]} fontSize={fontSize}>
+        <Text color="white" position={[3, 3.7, 0]} fontSize={fontSize}>
           2/29-3/2 Spokane Comedy Club
         </Text>
-        <Text color="white" position={[2.5, 2, 0]} fontSize={fontSize}>
+        <Text color="white" position={[2.8, 2.1, 0]} fontSize={fontSize}>
           3/7-9 Louisville Comedy Club
         </Text>
         <Html
           center
           zIndexRange={[100, 0]}
-          position={[6.5, 5.5, 0]}
+          position={[7, 5.5, 0]}
           style={{ zIndex: 4 }} // Set the zIndex here
         >
           <div
@@ -62,7 +62,7 @@ const ShowsComponent = ({ isMobile }) => {
             <span style={{ fontSize: "14px", color: "white" }}>Buy Tickets</span>
           </div>
         </Html>
-        <Html center zIndexRange={[100, 0]} position={[6.5, 4, 0]} style={{ zIndex: 4 }}>
+        <Html center zIndexRange={[100, 0]} position={[7, 4, 0]} style={{ zIndex: 4 }}>
           <div
             style={{
               position: "absolute",
@@ -83,7 +83,7 @@ const ShowsComponent = ({ isMobile }) => {
             <span style={{ fontSize: "14px", color: "white" }}>Buy Tickets</span>
           </div>
         </Html>
-        <Html center zIndexRange={[100, 0]} position={[6.5, 2.5, 0]} style={{ zIndex: 4 }}>
+        <Html center zIndexRange={[100, 0]} position={[7, 2.5, 0]} style={{ zIndex: 4 }}>
           <div
             style={{
               position: "absolute",
