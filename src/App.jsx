@@ -3,7 +3,7 @@ import "./styles.css";
 import PoppinsFont from "/fonts/Poppins-Black.ttf";
 import * as THREE from 'three';
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, OrbitControls, Billboard, Text, Stage, Html } from "@react-three/drei";
+import { PerspectiveCamera, OrbitControls, Billboard, Text, Stage, Html, Backdrop } from "@react-three/drei";
 //models
 import { Model } from "./models/Model.jsx";
 import { MobileModelMic } from "./models/MobileModelMic.jsx";
@@ -235,14 +235,16 @@ export default function App() {
     switch (selectedMenuItem) {
       case "HOME":
         return isMobile ? {
+          // Adjust the speed (25% of default speed)
           autoRotate: false,
-          enableZoom: true,
-          enablePan: true,
+          enableZoom: false,
+          enablePan: false,
           target: [1, -2, 0],
           minPolarAngle: Math.PI / 2,
           maxPolarAngle: Math.PI / 2
         } : {
           autoRotate: false,
+
           enableZoom: false,
           enablePan: false,
           target: [1, 0, 0],
@@ -252,8 +254,8 @@ export default function App() {
       case "ABOUT":
         return isMobile ? {
           autoRotate: false,
-          enableZoom: true,
-          enablePan: true,
+          enableZoom: false,
+          enablePan: false,
           target: [1, .5, 0],
           minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
@@ -268,8 +270,8 @@ export default function App() {
       case "SHOWS":
         return isMobile ? {
           autoRotate: false,
-          enableZoom: true,
-          enablePan: true,
+          enableZoom: false,
+          enablePan: false,
           target: [1, .5, 0],
           minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
@@ -284,8 +286,8 @@ export default function App() {
       case "PODCAST":
         return isMobile ? {
           autoRotate: false,
-          enableZoom: true,
-          enablePan: true,
+          enableZoom: false,
+          enablePan: false,
           target: [1, 0, 0],
           minPolarAngle: Math.PI / 1.9,
           maxPolarAngle: Math.PI / 2
@@ -300,8 +302,8 @@ export default function App() {
       default:
         return isMobile ? {
           autoRotate: false,
-          enableZoom: true,
-          enablePan: true,
+          enableZoom: false,
+          enablePan: false,
           target: [1, -2, 0],
           minPolarAngle: Math.PI / 2,
           maxPolarAngle: Math.PI / 2
@@ -424,6 +426,7 @@ export default function App() {
 
             {renderMenuItemComponent({ isMobile, handleResetToHome })}
           </Stage>
+
         </Suspense>
       </Canvas>
     </div>
