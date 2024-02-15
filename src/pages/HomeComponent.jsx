@@ -83,7 +83,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
               height: "130%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.06,
+              opacity: 0.08,
               pointerEvents: "none", // Cursor won't interact with the image
               userSelect: "none",
             }}
