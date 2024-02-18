@@ -49,7 +49,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
               left: "0",
               width: "120%",
               height: "120%",
-              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0.6) 10%, rgba(153, 0, 0, 0.7) 20%, rgba(153, 0, 0, 0.3) 30%, rgba(23, 23, 32, 1) 45%)",
+              backgroundImage: "radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0.6) 10%, rgba(153, 0, 0, 0.7) 20%, rgba(153, 0, 0, 0.3) 30%, rgba(23, 23, 32, 1) 45%, rgba(0, 0, 0, 0) 100%)",
 
 
 
