@@ -9,8 +9,8 @@ const HomeComponent = ({ isMobile, isTablet }) => {
     return null;
   }
 
-  const htmlPosition1 = isTablet ? [-10.2, 18, -3] : [-8.5, 12, 2];
-  const htmlPosition2 = isTablet ? [-8, 14.5, -3] : [-6.4, 10.3, 2];
+  const htmlPosition1 = isTablet ? [-10.2, 18, -3] : [-8.5, 13, 2];
+  const htmlPosition2 = isTablet ? [-8, 14.5, -3] : [-6.4, 11.3, 2];
 
 
 
@@ -56,7 +56,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
 
               pointerEvents: "none",
               zIndex: 1,
-              opacity: .2,
+              opacity: .35,
 
             }}
           />
@@ -83,7 +83,7 @@ const HomeComponent = ({ isMobile, isTablet }) => {
               height: "130%",
               position: "relative",
               zIndex: 1,
-              opacity: 0.08,
+              opacity: 0.15,
               pointerEvents: "none", // Cursor won't interact with the image
               userSelect: "none",
             }}

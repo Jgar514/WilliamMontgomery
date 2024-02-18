@@ -218,13 +218,13 @@ export default function App() {
   const getCameraProperties = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { position: [1, 0, 15], fov: 60 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [1, 0, 15], fov: 60 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
       case "ABOUT":
-        return isMobile ? { position: [-8, -1, -8], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [-8, -1, -8], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
       case "SHOWS":
-        return isMobile ? { position: [-8, -1, -7], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [-8, -1, -7], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
       case "PODCAST":
-        return isMobile ? { position: [-8, -1, -8], fov: 67 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 12], fov: 50 });
+        return isMobile ? { position: [-8, -1, -8], fov: 67 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
       default:
         return { position: [1, 0, 12], fov: 50 };
     }

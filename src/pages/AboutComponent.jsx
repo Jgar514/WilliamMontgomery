@@ -49,7 +49,7 @@ const AboutComponent = ({ isMobile }) => {
       >
         The William Montgomery Show!
       </Text>
-      <Html center zIndexRange={[100, 0]} position={[-17, 13, -2]}>
+      <Html center zIndexRange={[100, 0]} position={[-16, 13, -2]}>
         <div
           style={{
             position: "absolute",
