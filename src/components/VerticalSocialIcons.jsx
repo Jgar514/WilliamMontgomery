@@ -59,7 +59,7 @@ const VerticalSocialIcons = ({ position, isMobile, iconSize }) => {
         <FaReddit
           size={iconSize}
           style={{ color: "#ff4500", cursor: "pointer" }}
-          onClick={() => openLinkInNewWindow("https://old.reddit.com/r/WilliamsWorld/")}
+          onClick={() => openLinkInNewWindow("https://www.reddit.com/r/williammontgomeryshow/")}
         />
       </Html>
     </Billboard>
