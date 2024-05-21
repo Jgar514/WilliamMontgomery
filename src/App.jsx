@@ -54,7 +54,7 @@ export default function App() {
   const handleResetToHome = () => {
     console.log("Resetting to HOME");
     setSelectedMenuItem('HOME');
-    setIsMenuVisible(false);
+    setIsMenuVisible(true);
 
 
   };
@@ -158,7 +158,7 @@ export default function App() {
       case "ABOUT":
         return isMobile ? [1.5, 17, -6] : [4, 8.75, 0];
       case "SHOWS":
-        return isMobile ? [1.5, 16.5, -6] : [4, 8, 0];
+        return isMobile ? [1.5, 17.5, -6] : [4, 9.5, 0];
       case "PODCAST":
         return isMobile ? [1.5, 17.2, -6] : [4, 8.5, 0];
       default:
@@ -204,7 +204,7 @@ export default function App() {
       case "ABOUT":
         return isMobile ? [1, 15.5, -6] : [4, 1.7, 0];
       case "SHOWS":
-        return isMobile ? [1, 15.4, -6] : [4, 7, 0];
+        return isMobile ? [1, 16.4, -6] : [4, 8.5, 0];
       case "PODCAST":
         return isMobile ? [1, 16.2, -6] : [4, 7.5, 0];
       default:
@@ -274,7 +274,9 @@ export default function App() {
           enablePan: false,
           target: [1, .5, 0],
           minPolarAngle: Math.PI / 1.9,
-          maxPolarAngle: Math.PI / 2
+          maxPolarAngle: Math.PI / 2,
+          // minAzimuthAngle: -Math.PI / 1.5, // Restrict to rotate left
+          // maxAzimuthAngle: Math.PI / 1
         } : {
           autoRotate: false,
           enableZoom: false,
@@ -347,10 +349,10 @@ export default function App() {
         <div
           className="fixed bottom-0 opacity-50 pb-2 right-10 p-1 bg-white rounded shadow cursor-pointer text-black underline z-50 text-base"
           onClick={() => {
-            window.open("https://joshuagarvey.com/", "_blank");
+            window.open("https://homie.mobi/", "_blank");
           }}
         >
-          JoshuaGarvey.com
+          HOMIE.MOBI
         </div>
       )}
       {/* <div className="fixed bottom-0 left-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer" onClick={() => { setShowCatLink(!showCatLink); }}>

@@ -2,7 +2,7 @@ import React from "react";
 import { Text, Html, Billboard } from "@react-three/drei";
 import Background from "../assets/william.png";
 import { FaMusic } from "react-icons/fa";
-
+import comedyShows from "../data/comedyShows";
 const ShowsComponent = ({ isMobile }) => {
   const fontSize = 0.4;
 
@@ -23,10 +23,43 @@ const ShowsComponent = ({ isMobile }) => {
     console.log("Show 3 tickets clicked");
     window.open("https://www.louisvillecomedy.com/events/86589", "_blank");
   };
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const month = date.toLocaleString('default', { month: 'short' });
+    const day = date.getDate();
+    return { month, day };
+  };
 
   return (
     <>
       <Billboard>
+        <Html
+          center
+          zIndexRange={[100, 0]}
+          position={[4.9, 3.2, 0]}
+          style={{ zIndex: 4 }}
+        >
+          <div className=" flex flex-col p-4 h-[490px] overflow-y-auto bg-gray-700 border-b-2 shadow-white shadow-md">
+            {comedyShows.map((show, index) => (
+              <div key={index} className="bg-gray-100 border-2 border-red-600 w-[420px] rounded-lg p-2 mb-4 shadow-md flex flex-row justify-between">
+                <div className="text-black font-bold text-xl px-2 flex flex-col  ">
+                  <div className="">{formatDate(show.date).month}</div>
+                  <div className="flex justify-center">{formatDate(show.date).day}</div>
+                </div>
+                <div className="flex flex-col grow items-center">
+                  <div className="text-gray-700 text-xl font-bold m">{show.location}</div>
+                  <div className="  text-lg">{show.venue}</div>
+                </div>
+
+                <a href={show.link} className="bg-white hover:bg-yellow-200  text-black font-bold px-2 border-black border-2 rounded-lg hover:underline flex items-center shadow-md ">
+                  Buy Tickets
+                </a>
+              </div>
+            ))}
+          </div>
+        </Html>
+      </Billboard>
+      {/* <Billboard>
         <Text color="white" position={[3.1, 5.2, 0]} fontSize={fontSize}>
           2/23-24 Detroit House of Comedy
         </Text>
@@ -40,8 +73,9 @@ const ShowsComponent = ({ isMobile }) => {
           center
           zIndexRange={[100, 0]}
           position={[7, 5.5, 0]}
-          style={{ zIndex: 4 }} // Set the zIndex here
+          style={{ zIndex: 4 }}
         >
+          <div className="bg-white w-40">TEST</div>
           <div
             style={{
               position: "absolute",
@@ -56,9 +90,9 @@ const ShowsComponent = ({ isMobile }) => {
               backgroundColor: "rgba(0, 0, 0, 0.5)",
               cursor: "pointer",
             }}
-            onClick={show1} // Attach onClick event listener to this div
+            onClick={show1}
           >
-            {/* FaMusic Icon */}
+
             <span style={{ fontSize: "14px", color: "white" }}>Buy Tickets</span>
           </div>
         </Html>
@@ -79,7 +113,7 @@ const ShowsComponent = ({ isMobile }) => {
             }}
             onClick={show2} // Attach onClick event listener to this div
           >
-            {/* FaMusic Icon */}
+
             <span style={{ fontSize: "14px", color: "white" }}>Buy Tickets</span>
           </div>
         </Html>
@@ -100,11 +134,11 @@ const ShowsComponent = ({ isMobile }) => {
             }}
             onClick={show3} // Attach onClick event listener to this div
           >
-            {/* FaMusic Icon */}
+
             <span style={{ fontSize: "14px", color: "white" }}>Buy Tickets</span>
           </div>
         </Html>
-      </Billboard>
+      </Billboard> */}
     </>
   );
 };
