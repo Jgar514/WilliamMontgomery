@@ -169,7 +169,7 @@ export default function App() {
   const getTitleFontSize = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? 0.8 : .9;
+        return isMobile ? 1.1 : .9;
       case "ABOUT":
         return isMobile ? 0.8 : .9;
       case "SHOWS":
@@ -185,7 +185,7 @@ export default function App() {
   const getIconSize = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? 35 : 45;
+        return isMobile ? 20 : 45;
       case "ABOUT":
         return isMobile ? 25 : 50;
       case "SHOWS":
@@ -218,7 +218,7 @@ export default function App() {
   const getCameraProperties = () => {
     switch (selectedMenuItem) {
       case "HOME":
-        return isMobile ? { position: [1, 0, 15], fov: 60 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
+        return isMobile ? { position: [1, 0, 15], fov: 80 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
       case "ABOUT":
         return isMobile ? { position: [-8, -1, -8], fov: 65 } : (isTablet ? { position: [1, 0, 14], fov: 55 } : { position: [1, 0, 14], fov: 50 });
       case "SHOWS":
@@ -236,20 +236,20 @@ export default function App() {
       case "HOME":
         return isMobile ? {
           // Adjust the speed (25% of default speed)
-          autoRotate: false,
-          enableZoom: false,
+          autoRotate: true,
+          enableZoom: true,
           enablePan: false,
           target: [1, -2, 0],
-          minPolarAngle: Math.PI / 2,
-          maxPolarAngle: Math.PI / 2
+          // minPolarAngle: Math.PI / 2,
+          // maxPolarAngle: Math.PI / 2
         } : {
           autoRotate: false,
 
           enableZoom: false,
           enablePan: false,
           target: [1, 0, 0],
-          minPolarAngle: Math.PI / 2,
-          maxPolarAngle: Math.PI / 2
+          // minPolarAngle: Math.PI / 2,
+          // maxPolarAngle: Math.PI / 2
         };
       case "ABOUT":
         return isMobile ? {

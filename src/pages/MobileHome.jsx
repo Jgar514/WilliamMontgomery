@@ -12,11 +12,11 @@ const MobileHome = ({ isMobile }) => {
 
       {/* Add more Text elements as needed */}
 
-      <Html center zIndexRange={[100, 0]} position={[-7, 16.6, 0]}>
+      <Html center zIndexRange={[100, 0]} position={[-15, 18.5, 0]}>
         <div
           style={{
             position: "absolute",
-            width: `${window.innerWidth * 1.6}px`, // Multiply by 1.2
+            width: `${window.innerWidth * 1.4}px`, // Multiply by 1.2
             height: `${window.innerHeight * 1.3}px`, // Multiply by 1.2
             pointerEvents: "none",
             overflow: "hidden",
@@ -27,8 +27,8 @@ const MobileHome = ({ isMobile }) => {
             src={Background}
             alt="Background"
             style={{
-              width: "120%", // Increase the width to zoom in
-              height: "100%", // Increase the height to zoom in
+              width: "100%", // Increase the width to zoom in
+              height: "80%", // Increase the height to zoom in
               position: "relative",
               zIndex: 1,
               opacity: 0.13,
