@@ -27,7 +27,7 @@ import { FaCat } from "react-icons/fa";
 import linkText from './linkTextContent.js';
 
 export default function App() {
-  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
+  const [selectedMenuItem, setSelectedMenuItem] = useState("HOME");
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -40,24 +40,23 @@ export default function App() {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 901);
-      setIsTablet(width >= 901 && width < 1200); // Check for tablet size
-    }
-    handleResize(); // Check on component mount
-    setSelectedMenuItem("HOME");
+      setIsTablet(width >= 901 && width < 1200);
+    };
+
+    handleResize();
     window.addEventListener("resize", handleResize);
-    // Cleanup the event listener on component unmount
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const handleResetToHome = () => {
-    console.log("Resetting to HOME");
-    setSelectedMenuItem('HOME');
+    setSelectedMenuItem("HOME");
     setIsMenuVisible(true);
-
-
   };
+
+
 
   // My Pages
   const renderMenuItemComponent = () => {
@@ -349,10 +348,10 @@ export default function App() {
         <div
           className="fixed bottom-0 opacity-50 pb-2 right-10 p-1 bg-white rounded shadow cursor-pointer text-black underline z-50 text-base"
           onClick={() => {
-            window.open("https://homie.mobi/", "_blank");
+            window.open("https://joshuagarvey.com/", "_blank");
           }}
         >
-          HOMIE.MOBI
+          joshuagarvey.com
         </div>
       )}
       {/* <div className="fixed bottom-0 left-0 z-50 w-10 h-10 flex items-end pb-2 justify-center cursor-pointer" onClick={() => { setShowCatLink(!showCatLink); }}>
